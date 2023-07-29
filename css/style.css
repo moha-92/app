@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    }
+body{
+    display:grid;
+        background-color: rgb(165, 165, 157);
+        width:auto;
+        height: 1200px;
+       
+       text-align: center;
+       grid-template-columns: auto auto auto auto;
+       grid-template-rows: 50px auto 80px ;
+        grid-template-areas: "header nav nav nav "  " main main main main "  "footer footer footer footer"}
+    header{
+        background-color: rgb(62, 134, 139);
+        height: 90px;
+        width: auto;
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: transparent;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 2px;
+        margin: 0;
+        text-align: start;
+        animation: anim 2s linear 0s infinite alternate ;
+    }
+    @keyframes anim {
+        50%{text-align: center;}
+        100%{text-align: end;}
+        
+    }
+    h2{
+        color:beige;
+        margin-bottom: 20px ;
+    }
+    span{
+   color:rgb(236, 226, 205);
+    }
+
+    ul li { display: inline-block;
+    border: 2px;
+    padding: 5px;
+    margin-left: 30px;
+    background-color: rgb(166, 255, 0);
+border-style: solid;
+border-radius: 20% ;}
+
+    a {text-decoration: none;
+    font-size: 20px;}
+     a:hover{ color: red;}
+
+    nav{
+        grid-area: nav;
+        background-color: rgb(31, 141, 141);
+  }
+
+
+    main{
+        grid-area: main;
+        background:linear-gradient(15deg,rgb(173, 177, 173) ,brown,rgb(31, 141, 141 ));
+        box-shadow: 2 2 0 0 red;
+        font-size: 30px;
+    }
+
+    article{
+        padding:1px ;
+    }
+
+    footer  {
+        grid-area: footer;
+        background-color: rgb(173, 177, 173);
+    }
+    footer ul  {
+        display:inline-block ;
+    }
+    footer ul a {
+        display: inline-block ;
+        color: black;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       margin-left: 20px ;
+       border-radius: 20px;
+       border-style: bold;
+       border: 10px;
+    }
